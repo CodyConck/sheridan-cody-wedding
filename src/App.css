@@ -2,6 +2,15 @@ img {
   height: 500px;
 }
 
+.div-header {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }

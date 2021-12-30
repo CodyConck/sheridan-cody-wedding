@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
+import Header from './Components/Header/Header';
 
 class App extends React.Component {
   render () {
 
     return (
       <div>
-        <h2>Sheridan and Cody</h2>
+        <Header/>
         
         <img src="/images/IMG_0523.JPG" alt=""/>
       </div>

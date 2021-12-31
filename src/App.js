@@ -8,6 +8,10 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
+          <div className='nameDate'>
+            <h1>Sheridan & Cody</h1>
+            <p>Date TBD</p>
+          </div>
         
         <img src="/images/IMG_0523.JPG" alt=""/>
       </div>

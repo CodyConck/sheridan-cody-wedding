@@ -13,6 +13,11 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+.div-footer {
+  text-align: center;
+  color:rgb(35, 93, 95);
+  font-family: cursive;
+}
 .nameDate {
   text-align: center;
   color:cadetblue;

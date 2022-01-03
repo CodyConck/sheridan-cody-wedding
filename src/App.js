@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import Nav from './Components/Nav/Nav';
 
 class App extends React.Component {
   render () {
@@ -9,10 +10,7 @@ class App extends React.Component {
     return (
       <div>
         <Header/>
-          <div className='nameDate'>
-            <h1>Sheridan & Cody</h1>
-            <p>Date TBD</p>
-          </div>
+        <Nav/>
         
         <img src="/images/IMG_0523.JPG" alt=""/>
         <Footer/>

@@ -5,14 +5,39 @@ img {
   
 }
 
-.div-header {
+.div-nav {
   width: 80%;
   margin: 0 auto;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Abel', sans-serif;
+  font-weight: 550;
 }
+.jumbotron {
+  margin-top: 20px;
+  background-image: url("https://i.pinimg.com/originals/d6/21/8b/d6218b98a6d1fa3fee736806c69dc28f.jpg");
+  background-size: cover;
+
+}
+.name1 {
+  color:lemonchiffon;
+  font-family: 'Abel', sans-serif;
+  font-weight:600;
+  text-align: center;
+}
+
+.name2{
+  color: lemonchiffon;
+  font-family: 'Island Moments', cursive;
+  font-size:xx-large;
+  font-weight: 550;
+  font-style: italic;
+  text-align: center;
+}
+
 .div-footer {
   text-align: center;
   color:rgb(35, 93, 95);

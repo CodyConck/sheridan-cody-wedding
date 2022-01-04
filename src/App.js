@@ -1,22 +1,47 @@
-import React from 'react';
-import './App.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
-import Nav from './Components/Nav/Nav';
+import NavBar from './Components/Nav/NavBar';
 
-class App extends React.Component {
-  render () {
+import Home from './Pages/Home';
+import RSVP from './Pages/RSVP';
+import Events from './Pages/Events';
+import WeddingDetails from './Pages/WeddingDetails';
+import Registry from './Pages/Registry';
+import FAQs from './Pages/FAQs';
+import './App.css';
 
-    return (
-      <div>
-        <Header/>
-        <Nav/>
-        
-        <img src="/images/IMG_0523.JPG" alt=""/>
-        <Footer/>
-      </div>
-    )
-  }
-}
+import { useState } from 'react';
+
+function App() {
+  const [currentPage, handlePageChange] = useState('Home');
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'RSVP':
+        return <RSVP />;
+      case 'Events':
+        return <Events />;
+      case 'Wedding Details':
+        return <WeddingDetails />;
+      case 'Registry':
+        return <Registry />;
+      case 'FAQs':
+        return <FAQs />;
+      default:
+        return <Home />
+    }
+  };
+
+return (
+  <div>
+    {/* Pass the state value and the setter as props to NavBar */}
+    <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
+    {/* Call the renderPage function passing in the currentPage */}
+    <div>{renderPage(currentPage)}</div>
+    <main>
+
+    </main>
+  </div>
+)
+};
 
 export default App;

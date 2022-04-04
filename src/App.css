@@ -4,9 +4,19 @@
   font-weight:600;
   text-align: center;
 }
-
+/* container that has nav links in it, centers links */
 .container {
   justify-content: center !important;
+}
+.navBar {
+  background-color: antiquewhite;
+}
+
+.div-footer {
+  text-align: center;
+  padding-top: .75em;
+  padding-bottom: .25em;
+  background-color: antiquewhite;
 }
 /* img {
   height: 500px;

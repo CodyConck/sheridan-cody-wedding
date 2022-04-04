@@ -4,7 +4,7 @@ import React from 'react';
 
 function NavBar(props) {
     return (
-        <Navbar bg="light" variant="light">
+        <Navbar className="navBar" variant="light">
             <Container>
                 <Navbar.Brand href="#home">
                     {/* below is box image from navbar bootstrap */}

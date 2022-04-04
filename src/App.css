@@ -7,6 +7,8 @@
 /* container that has nav links in it, centers links */
 .container {
   justify-content: center !important;
+  font-family: 'Abel', sans-serif;
+  font-weight: 500;
 }
 .navBar {
   background-color: white;
@@ -17,6 +19,8 @@
   padding-top: .75em;
   padding-bottom: .25em;
   background-color: lemonchiffon;
+  font-family: 'Abel', sans-serif;
+  font-weight: 500;
 }
 /* img {
   height: 500px;

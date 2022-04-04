@@ -4,16 +4,17 @@ import React from 'react';
 
 function NavBar(props) {
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="light" variant="light">
             <Container>
                 <Navbar.Brand href="#home">
-                    <img
+                    {/* below is box image from navbar bootstrap */}
+                    {/* <img
                         alt=""
                         src="https://media-exp1.licdn.com/dms/image/C5603AQForKoF0a0EnQ/profile-displayphoto-shrink_800_800/0/1585159973912?e=1635984000&v=beta&t=W4byoP7pZ7XCguLwyqcRoAM4KlPNQQBVbfd_c3XV_BM"
                         width="50"
                         height="50"
                         className="d-inline-block align-top"
-                    />{' '}
+                    />{' '} */}
       </Navbar.Brand>
                 <Nav className="mr-auto">
                     <Nav.Link onClick={() => props.handlePageChange('Home')} href="#home">Home</Nav.Link>

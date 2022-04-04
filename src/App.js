@@ -33,6 +33,7 @@ function App() {
 
 return (
   <div>
+    <Header />
     {/* Pass the state value and the setter as props to NavBar */}
     <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
     {/* Call the renderPage function passing in the currentPage */}

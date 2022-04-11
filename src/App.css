@@ -50,6 +50,15 @@
   align-items: center;
   padding-bottom: 15px;
 }
+
+.input-text {
+  background-color: lavender !important;
+}
+
+.input-button {
+  background-color: rgb(136, 136, 244) !important;
+  ;
+}
 /* img {
   height: 500px;
   margin: auto;

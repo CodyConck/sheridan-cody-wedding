@@ -9,12 +9,12 @@ const RSVP = () => {
         <div class='container-fluid' className='rsvp-style'>
             <h1>You're Invited</h1>
             <InputGroup className="mb-3">
-                <InputGroup.Text>First and last name on invitation</InputGroup.Text>
+                <InputGroup.Text className= "input-text">First and last name on invitation</InputGroup.Text>
                 <FormControl aria-label="First name" />
                 <FormControl aria-label="Last name" />
             </InputGroup>
             <>
-                <Button as="input" type="submit" value="Submit" />{' '}
+                <Button as="input" type="submit" value="Submit" className="input-button" />{' '}
                 
             </>
         </div>

@@ -10,8 +10,10 @@ const RSVP = () => {
             <h1>You're Invited</h1>
             <InputGroup className="mb-3">
                 <InputGroup.Text className= "input-text">First and last name on invitation</InputGroup.Text>
-                <FormControl aria-label="First name" />
-                <FormControl aria-label="Last name" />
+                <FormControl aria-label="First name"
+                  placeholder='First Name' />
+                <FormControl aria-label="Last name" 
+                  placeholder='Last Name'/>
             </InputGroup>
             <>
                 <Button as="input" type="submit" value="Submit" className="input-button" />{' '}

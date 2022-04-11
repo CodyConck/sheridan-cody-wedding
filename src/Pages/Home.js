@@ -17,7 +17,7 @@ const Home = () => {
                 }}
             />
             <div className='home-page-message' >
-                <h3>Please join us for a our wedding celebration on</h3>
+                <h3>Please join us for our wedding celebration on</h3>
                 <h1>Some Day 2022 or 2023</h1>
             </div>
             <div className='home-page-body'>

@@ -7,13 +7,14 @@
 /* container that has nav links in it, centers links */
 .container {
   justify-content: center !important;
-  font-family: 'Abel', sans-serif;
-  font-weight: 500;
 }
 .navBar {
+  font-family: 'Abel', sans-serif;
+  font-weight: 500;
   background-color: rgb(250, 247, 223);
   position: sticky !important;
   top: 0;
+  box-shadow: 0 5px 5px -5px;
 }
 
 .home-page-message {
@@ -24,6 +25,7 @@
   text-align: 'center';
   padding-left: 25px;
   align-items: center;
+  padding-top: 15px;
 }
 .home-page-body {
   display: flex;
@@ -32,7 +34,8 @@
   font-weight: 500;
   align-items: center;
   padding: 10px;
-  background-color: lavender;
+  background-color: rgb(136, 136, 244);
+  color: white;
 }
 
 .div-footer {
@@ -51,13 +54,15 @@
   font-weight: 500;
   align-items: center;
   padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .input-text {
   background-color: rgb(136, 136, 244) !important;
+  color: white !important;
 }
 
-.input-button {
+.openModalBtn {
   background-color: rgb(136, 136, 244) !important;
   ;
 }

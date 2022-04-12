@@ -13,7 +13,8 @@ const Home = () => {
                 style={{
                     height: 400,
                     width: 300,
-                    borderRadius: 10
+                    borderRadius: 10,
+                    marginTop: 15,
                 }}
             />
             <div className='home-page-message' >

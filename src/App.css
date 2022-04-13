@@ -1,17 +1,19 @@
 .header-letters {
-  color:rgb(250, 247, 223);
+  color: rgb(250, 247, 223);
   font-family: 'Abel', sans-serif;
-  font-weight:600;
+  font-weight: 600;
   text-align: center;
 }
 
 .navBar {
   font-family: 'Abel', sans-serif;
   font-weight: 500;
+}
+
+.navBar {
   background-color: rgb(250, 247, 223);
   position: sticky !important;
   top: 0;
-  box-shadow: 0 5px 5px -5px;
 }
 
 .home-page-message {
@@ -22,8 +24,8 @@
   text-align: 'center';
   padding-left: 25px;
   align-items: center;
-  padding-top: 15px;
 }
+
 .home-page-body {
   display: flex;
   flex-direction: column;
@@ -31,8 +33,7 @@
   font-weight: 500;
   align-items: center;
   padding: 10px;
-  background-color: rgb(136, 136, 244);
-  color: white;
+  background-color: lavender;
 }
 
 .div-footer {
@@ -51,7 +52,6 @@
   font-weight: 500;
   align-items: center;
   padding-bottom: 15px;
-  padding-top: 15px;
 }
 
 .input-text {
@@ -61,8 +61,14 @@
 
 .openModalBtn {
   background-color: rgb(136, 136, 244);
-  ;
+  background-color: rgb(136, 136, 244) !important;
 }
+
+.input-button {
+  background-color: rgb(136, 136, 244) !important;
+
+}
+
 /* img {
   height: 500px;
   margin: auto;

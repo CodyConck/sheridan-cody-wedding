@@ -1,49 +1,31 @@
 //import logo from '';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-function NavBar(props) {
+const NavBar = () => {
   return (
     <Navbar className="navBar" variant="light">
       <Container className="justify-content-center">
-        <Navbar.Brand href="#home">
-          {/* below is box image from navbar bootstrap */}
-          {/* <img
-                        alt=""
-                        src="https://media-exp1.licdn.com/dms/image/C5603AQForKoF0a0EnQ/profile-displayphoto-shrink_800_800/0/1585159973912?e=1635984000&v=beta&t=W4byoP7pZ7XCguLwyqcRoAM4KlPNQQBVbfd_c3XV_BM"
-                        width="50"
-                        height="50"
-                        className="d-inline-block align-top"
-                    />{' '} */}
-        </Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link onClick={() => props.handlePageChange('Home')} href="#home">
+          <Link to="/">
             Home
-          </Nav.Link>
-          <Nav.Link onClick={() => props.handlePageChange('RSVP')} href="#home">
+          </Link>
+          <Link to="rsvp">
             RSVP
-          </Nav.Link>
-          <Nav.Link
-            onClick={() => props.handlePageChange('Wedding Details')}
-            href="#home"
-          >
+          </Link>
+          <Link to="weddingdetails">
             Wedding Details
-          </Nav.Link>
-          <Nav.Link
-            onClick={() => props.handlePageChange('Events')}
-            href="#home"
-          >
+          </Link>
+          <Link to="events">
             Events
-          </Nav.Link>
-          <Nav.Link
-            onClick={() => props.handlePageChange('Registry')}
-            href="#home"
-          >
+          </Link>
+          <Link to="registry">
             Registry
-          </Nav.Link>
-          <Nav.Link onClick={() => props.handlePageChange('FAQs')} href="#home">
+          </Link>
+          <Link to="faqs">
             FAQs
-          </Nav.Link>
+          </Link>
         </Nav>
       </Container>
     </Navbar>

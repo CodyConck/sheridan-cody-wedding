@@ -1,6 +1,7 @@
 import './App.css';
 
-import { useState } from 'react';
+//import { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
@@ -13,34 +14,36 @@ import RSVP from './Pages/RSVP';
 import WeddingDetails from './Pages/WeddingDetails';
 
 function App() {
-  const [currentPage, handlePageChange] = useState('Home');
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'RSVP':
-        return <RSVP />;
-      case 'Events':
-        return <Events />;
-      case 'Wedding Details':
-        return <WeddingDetails />;
-      case 'Registry':
-        return <Registry />;
-      case 'FAQs':
-        return <FAQs />;
-      default:
-        return <Home />;
-    }
-  };
-
   return (
+    <Router>
     <div>
       <Header />
-      {/* Pass the state value and the setter as props to NavBar */}
-      <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
-      {/* Call the renderPage function passing in the currentPage */}
-      <div>{renderPage(currentPage)}</div>
-      <main></main>
+      <NavBar />
+      <div>
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route path='/rsvp'>
+            <RSVP />
+          </Route>
+          <Route path='/events'>
+            <Events />
+          </Route>
+          <Route path='/registry'>
+            <Registry />
+          </Route>
+          <Route path='/weddingdetails'>
+            <WeddingDetails />
+          </Route>
+          <Route path='/faqs'>
+            <FAQs />
+          </Route>
+        </Switch>
+      </div>
       <Footer />
     </div>
+    </Router>
   );
 }
 

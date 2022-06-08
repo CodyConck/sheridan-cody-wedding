@@ -3,11 +3,53 @@ import { useState } from 'react';
 import { InputGroup } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
+import api from '../lib/api';
 
 import Modal from '../Components/Modal/Modal';
 
 const RSVP = () => {
-  const [openModal, setOpenModal] = useState(false);
+  const [guest, setGuest] = useState(false);
+  const [values, setValues] = useState({ firstName: "", lastName: "" });
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (event) => {
+    setValues((values) => {
+      return {
+        ...values,
+        [event.target.name]: event.target.value
+      };
+    });
+  }
+
+  const handleSubmit = (event) => {
+    setErrors({})
+    if (!values.firstName || !values.lastName) {
+      setErrors({message:"First and Last name are required"})
+      return
+    }
+    setLoading(true)
+    const params = {
+      firstName: { $regex: values.firstName, $options: 'i' },
+      lastName: { $regex: values.lastName, $options: 'i' }
+    };
+    
+    api.get("/guests", { params, mode: "cors" })
+      .then(result => {
+        setLoading(false)
+        const guests = result.data
+        const guest = guests[0]
+        if (!guest) {
+          setErrors({message:"No guest matches this search"})
+        }
+        setGuest(guest)
+      })
+      .catch(err => {
+        setLoading(false)
+        setErrors({message:err.message})
+      })
+  }
+
   return (
     <div class="container-fluid" className="rsvp-style">
       <h1>You're Invited</h1>
@@ -15,20 +57,20 @@ const RSVP = () => {
         <InputGroup.Text className="input-text">
           First and last name on invitation
         </InputGroup.Text>
-        <FormControl aria-label="First name" placeholder="First Name" />
-        <FormControl aria-label="Last name" placeholder="Last Name" />
+        <FormControl onChange={handleChange} name="firstName" disabled={loading} value={values.firstName} aria-label="First name" placeholder="First Name" />
+        <FormControl onChange={handleChange} name="lastName" disabled={loading} value={values.lastName} aria-label="Last name" placeholder="Last Name" />
       </InputGroup>
       <>
         <Button
-          as="input"
-          type="submit"
           value="Submit"
           className="openModalBtn"
+          disabled={loading}
           onClick={() => {
-            setOpenModal(true);
+            handleSubmit();
           }}
-        />
-        {openModal && <Modal closeModalProps={setOpenModal} />}
+        >Submit</Button>
+        {guest && <Modal guest={guest} setGuest={setGuest} />}
+        {errors.message && <div className="text-danger">{errors.message}</div>}
       </>
     </div>
   );

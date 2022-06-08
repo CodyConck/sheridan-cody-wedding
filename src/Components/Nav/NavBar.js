@@ -8,24 +8,37 @@ const NavBar = () => {
     <Navbar className="navBar" variant="light">
       <Container className="justify-content-center">
         <Nav className="mr-auto">
-          <Link to="/">
-            Home
-          </Link>
-          <Link to="rsvp">
-            RSVP
-          </Link>
-          <Link to="weddingdetails">
-            Wedding Details
-          </Link>
-          <Link to="events">
-            Events
-          </Link>
-          <Link to="registry">
-            Registry
-          </Link>
-          <Link to="faqs">
-            FAQs
-          </Link>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/">
+              Home
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/rsvp">
+              RSVP
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/weddingdetails">
+              Wedding Details
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/events">
+              Events
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/registry">
+              Registry
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} to="/faqs">
+              FAQs
+            </Nav.Link>
+          </Nav.Item>
+
         </Nav>
       </Container>
     </Navbar>

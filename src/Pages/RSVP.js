@@ -5,7 +5,8 @@ import { FormControl } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import api from '../lib/api';
 
-import Modal from '../Components/Modal/Modal';
+import ModalOne from '../Components/Modal/isThisYouModal';
+//import ModalTwo from '../Components/Modal/confirmationModal';
 
 const RSVP = () => {
   const [guest, setGuest] = useState(false);
@@ -69,7 +70,8 @@ const RSVP = () => {
             handleSubmit();
           }}
         >Submit</Button>
-        {guest && <Modal guest={guest} setGuest={setGuest} />}
+        {guest && <ModalOne guest={guest} setGuest={setGuest} />}
+        {/* {confirmGuest && <ModalTwo confirmGuest={confirmGuest} setConfirmGuest={setConfirmGuest} />}  */}
         {errors.message && <div className="text-danger">{errors.message}</div>}
       </>
     </div>

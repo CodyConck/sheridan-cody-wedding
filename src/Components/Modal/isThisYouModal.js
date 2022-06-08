@@ -1,8 +1,16 @@
 import './Modal.css';
 
-import React from 'react';
+import React, {useState} from 'react';
 
-function Modal({ setGuest, guest }) {
+
+function ModalOne({ setGuest, guest }) {
+  
+  // const [confirmGuest, setConfirmGuest] = useState(false);
+
+  // const yesClickHandler = (event) => {
+  //   console.log('yes button clicked')
+  // }
+
   return (
     <div className="modalBackground">
       <div className="modalContainer">
@@ -20,7 +28,8 @@ function Modal({ setGuest, guest }) {
           </div>
           </div>
         <div className="footer">
-          <button>Yes</button>
+          {/* <h1>{confirmGuest}</h1> */}
+          <button onClick={() => setGuest(true)} id="confirmBtn">Yes</button>
           <button onClick={() => setGuest(false)} id="cancelBtn">
             No
           </button>
@@ -30,4 +39,4 @@ function Modal({ setGuest, guest }) {
   );
 }
 
-export default Modal;
+export default ModalOne;
